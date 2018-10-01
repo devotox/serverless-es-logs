@@ -22,7 +22,7 @@
     "compile:watch": "tsc -w",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "tslint --project . --format stylish",
-    "prepublish": "yarn compile:clean && yarn compile",
+    "postinstall": "yarn compile:clean && yarn compile",
     "release": "semantic-release",
     "test": "nyc mocha"
   },
