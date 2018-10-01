@@ -17,14 +17,14 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "compile": "npx tsc",
-    "compile:clean": "npx rimraf dist",
-    "compile:watch": "npx tsc -w",
+    "compile": "tsc",
+    "compile:clean": "rimraf dist",
+    "compile:watch": "tsc -w",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "lint": "npx tslint --project . --format stylish",
-    "postinstall": "yarn compile:clean && yarn compile",
-    "release": "npx semantic-release",
-    "test": "npx nyc mocha"
+    "lint": "tslint --project . --format stylish",
+    "prepublish": "yarn compile:clean && yarn compile",
+    "release": "semantic-release",
+    "test": "nyc mocha"
   },
   "keywords": [
     "aws",
