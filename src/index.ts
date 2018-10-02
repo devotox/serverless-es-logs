@@ -264,18 +264,18 @@ class ServerlessEsLogsPlugin {
         ES_ENDPOINT: endpoint,
         INDEX_PREFIX: index,
       },
-      events: [],
-      handler,
-      memorySize: 128,
       name,
-      package: {
-        exclude: ['**'],
-        include: [`${this.logProcesserDir}/**`],
-        individually: true,
-      },
-      runtime: 'nodejs8.10',
+      handler,
+      events: [],
       timeout: 60,
       tracing: false,
+      memorySize: 128,
+      runtime: 'nodejs8.10',
+      package: {
+        exclude: ['**'],
+        individually: true,
+        include: [`${this.logProcesserDir}/**`],
+      }
     };
   }
 
