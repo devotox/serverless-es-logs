@@ -232,7 +232,7 @@ class ServerlessEsLogsPlugin {
             },
             events: [],
             handler,
-            memorySize: 512,
+            memorySize: 128,
             name,
             package: {
                 exclude: ['**'],
